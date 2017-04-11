@@ -84,6 +84,83 @@ namespace MIDPS_LAB_2
             return this.operationPressed;
         }
 
+        public string DeleteButton(string expresion)
+        {
+            if (expresion.ToString().Length == 1)
+            {
+                return "0";
+            }
+            if (expresion == "0")
+            {
+                return "0";
+            }
+            return expresion.Remove(expresion.Length - 1);
+        }
+
+        public string PlusMinus(string expresion)
+        {
+            if (expresion.StartsWith("-"))
+            {
+                expresion = expresion.Substring(1);
+                return expresion;
+            }
+            else if (!string.IsNullOrEmpty(expresion) && decimal.Parse(expresion) != 0)
+            {
+                expresion = "-" + expresion;
+                return expresion;
+            }
+            else
+            {
+                return expresion;
+            }
+        }
+
+        public string dotButton(string expresion)
+        {
+            if (expresion.EndsWith(","))
+            {
+                return expresion;
+            }
+            else if (!string.IsNullOrEmpty(expresion) && decimal.Parse(expresion) != 0)
+            {
+                expresion = expresion + ",";
+                return expresion;
+            }
+            else
+            {
+                return expresion;
+            }
+
+        }
+
+        public void DoOperation()
+        {
+
+            switch (operation)
+            {
+
+                case "+":
+
+                    result = Double.Parse(this.number1) + Double.Parse(this.number);
+                    break;
+                case "-":
+                    result = Double.Parse(this.number1) - Double.Parse(this.number);
+                    break;
+                case "/":
+                    result = Double.Parse(this.number1) / Double.Parse(this.number);
+                    break;
+                case "*":
+                    result = Double.Parse(this.number1) * Double.Parse(this.number);
+                    break;
+                case "pow":
+                    result = Math.Pow(Double.Parse(this.number1), Double.Parse(this.number));
+                    break;
+                default:
+                    break;
+            }
+            operationPressed = false;
+        }
+
 
     }
 }
