@@ -161,6 +161,26 @@ namespace MIDPS_LAB_2
             operationPressed = false;
         }
 
-
+        public void SqrtOperation(string number)
+        {
+            switch (operation)
+            {
+                case "sin":
+                    result = Math.Sin(Double.Parse(number));
+                    break;
+                case "cos":
+                    result = Math.Cos(Double.Parse(number));
+                    break;
+                case "tan":
+                    result = Math.Tan(Double.Parse(number));
+                    break;
+                case "log":
+                    result = Math.Log(Double.Parse(number));
+                    break;
+                case "sqrt":
+                    result = Math.Sqrt(Double.Parse(number));
+                    break;
+            }
+        }
     }
 }
