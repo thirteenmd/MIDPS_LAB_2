@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="BusinessLogic.cs" />
+>>>>>>> 6e00ca54e2910cdf19e4643ce17c77c892fd5efa
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
     </Compile>

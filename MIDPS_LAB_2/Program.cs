@@ -16,7 +16,11 @@ namespace MIDPS_LAB_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Calculator());
+=======
+            Application.Run(new GUI());
+>>>>>>> 6e00ca54e2910cdf19e4643ce17c77c892fd5efa
         }
     }
 }
