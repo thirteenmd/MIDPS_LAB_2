@@ -1,6 +1,6 @@
 ﻿namespace MIDPS_LAB_2
 {
-    partial class Form1
+    partial class GUI
     {
         /// <summary>
         /// Required designer variable.
